@@ -6,7 +6,17 @@ spring:
   cloud:
     discovery:
       enabled: true
-#    gateway:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:4200"
+            allowedHeaders: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
 #      routes:
 #        - id: r1
 #          uri: http://localhost:8081

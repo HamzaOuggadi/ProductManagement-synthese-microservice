@@ -1,5 +1,6 @@
 package net.hamzaouggadi.inventoryservice;
 
+import lombok.extern.slf4j.Slf4j;
 import net.hamzaouggadi.inventoryservice.entities.Product;
 import net.hamzaouggadi.inventoryservice.repositories.ProductRepository;
 import org.springframework.boot.CommandLineRunner;
@@ -8,11 +9,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.stream.Stream;
 
 @SpringBootApplication
+@Slf4j
 public class InventoryServiceApplication {
 
 	public static void main(String[] args) {
@@ -32,8 +35,10 @@ public class InventoryServiceApplication {
 							.productName(prod)
 							.productDescription("Description : " + prod)
 							.productPrice(BigDecimal.valueOf(7000 + Math.random()*10000).setScale(2, RoundingMode.HALF_UP).doubleValue())
-							.productQuantity((int)Math.random()*100)
+							.productQuantity((int)(Math.random()*100))
 							.build();
+
+					log.info("Product Quantity" + product.getProductQuantity());
 
 					productRepository.save(product);
 				});

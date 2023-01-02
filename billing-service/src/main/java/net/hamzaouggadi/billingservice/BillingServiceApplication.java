@@ -37,26 +37,29 @@ public class BillingServiceApplication {
                             ProductRestClient productRestClient) {
         return args -> {
             Collection<Product> products = productRestClient.allProduct().getContent();
-            Customer customer = customerRestClient.findCustomerById(1L);
-            if (customer==null) throw new RuntimeException("Customer Not Found!");
-            log.info("Customer Id : " + customer.getCustomerId());
-            log.info("Customer Name : " + customer.getCustomerName());
-            log.info("Customer Email : " + customer.getCustomerEmail());
-            Bill bill = Bill.builder()
-                    .billDate(new Date())
-                    .customerId(customer.getCustomerId())
-                    .build();
-            Bill savedBill = billRepository.save(bill);
-            products.forEach(prd->{
-                ProductItem productItem = new ProductItem();
-                productItem.setBill(savedBill);
-                productItem.setProductItemQuantity((int)(1+(Math.random()*10)));
-                productItem.setProductItemPrice(prd.getProductPrice());
-                productItem.setDiscount(BigDecimal.valueOf(Math.random()).setScale(2, RoundingMode.HALF_UP).doubleValue());
-                productItem.setProductId(prd.getProductId());
-                productItem.setProductItemDescription(prd.getProductDescription());
-                productItemRepository.save(productItem);
-            });
+            for (int i=1;i<=3; i++) {
+                Customer customer = customerRestClient.findCustomerById(Long.valueOf(i));
+                if (customer==null) throw new RuntimeException("Customer Not Found!");
+                log.info("Customer Id : " + customer.getCustomerId());
+                log.info("Customer Name : " + customer.getCustomerName());
+                log.info("Customer Email : " + customer.getCustomerEmail());
+                Bill bill = Bill.builder()
+                        .billDate(new Date())
+                        .customerId(customer.getCustomerId())
+                        .build();
+                Bill savedBill = billRepository.save(bill);
+                products.forEach(prd->{
+                    ProductItem productItem = new ProductItem();
+                    productItem.setBill(savedBill);
+                    productItem.setProductItemQuantity((int)(1+(Math.random()*10)));
+                    productItem.setProductItemPrice(prd.getProductPrice());
+                    productItem.setDiscount(BigDecimal.valueOf(Math.random()).setScale(2, RoundingMode.HALF_UP).doubleValue());
+                    productItem.setProductId(prd.getProductId());
+                    productItem.setProductItemDescription(prd.getProductDescription());
+                    productItemRepository.save(productItem);
+                });
+            }
+
         };
     }
 

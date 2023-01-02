@@ -1,1 +1,33 @@
-<p>customers works!</p>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-10">
+      <div class="card">
+        <div class="card-header bg-success bg-gradient">Customers List</div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-striped table-hover">
+              <thead class="table-success">
+              <tr>
+                <th>Customer's ID</th><th>Customer's Name</th><th>Customer's Email</th><th>Action</th>
+              </tr>
+              </thead>
+              <tbody class="table-group-divider">
+              <tr *ngFor="let c of customers._embedded.customers">
+                <td>{{c.customerId}}</td>
+                <td>{{c.customerName}}</td>
+                <td>{{c.customerEmail}}</td>
+                <td><button class="btn btn-success me-2">Bills</button><button class="btn btn-primary me-2">Edit</button><button class="btn btn-danger me-2">Delete</button></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
