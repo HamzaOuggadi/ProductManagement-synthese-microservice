@@ -36,7 +36,7 @@ public class BillingServiceApplication {
                             CustomerRestClient customerRestClient,
                             ProductRestClient productRestClient) {
         return args -> {
-            Collection<Product> products = productRestClient.allProduct().getContent();
+            Collection<Product> products = productRestClient.allProduct();
             for (int i=1;i<=3; i++) {
                 Customer customer = customerRestClient.findCustomerById(Long.valueOf(i));
                 if (customer==null) throw new RuntimeException("Customer Not Found!");

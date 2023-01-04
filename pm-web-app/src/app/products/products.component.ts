@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {InventoryService} from "../services/inventory.service";
+import {Product} from "../model/product.model";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-products',
@@ -9,7 +11,7 @@ import {InventoryService} from "../services/inventory.service";
 })
 export class ProductsComponent implements OnInit{
 
-  products : any;
+  products! : Array<Product>;
   errorMessage! : String;
   constructor(private http:HttpClient, private inventoryService:InventoryService) {
 
@@ -26,14 +28,30 @@ export class ProductsComponent implements OnInit{
     //   }
     // });
 
-    this.http.get("http://localhost:8888/INVENTORY-SERVICE/products").subscribe({
+    // this.http.get<Array<Product>>("http://localhost:8888/INVENTORY-SERVICE/products").subscribe({
+    //   next : (data) => {
+    //     this.products = data;
+    //   },
+    //   error : (err)=> {
+    //
+    //   }
+
+    this.inventoryService.getAllProducts().subscribe({
       next : (data) => {
         this.products = data;
-      },
-      error : (err)=> {
-
+      }, error : (err) => {
+        console.log(err);
       }
     });
+
+    //   this.http.get<Array<Product>>("http://localhost:8888/INVENTORY-SERVICE/products").subscribe({
+    //     next : (data) => {
+    //       this.products = data;
+    //     },
+    //     error : (err)=> {
+    //       console.log(err);
+    //     }
+    // });
 
     console.log("Products Object Here : " + this.products);
   }
