@@ -37,10 +37,6 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public void deleteProduct(Long productId) throws ProductException {
-        if (productRepository.findById(productId) == null) {
-            throw new ProductException("Product Doesn't Exist!");
-        } else {
-            productRepository.deleteById(productId);
-        }
+        productRepository.deleteById(productId);
     }
 }

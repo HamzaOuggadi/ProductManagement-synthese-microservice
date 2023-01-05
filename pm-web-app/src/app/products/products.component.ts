@@ -19,23 +19,12 @@ export class ProductsComponent implements OnInit{
 
   ngOnInit(): void {
 
-    // this.inventoryService.getAllProducts().subscribe({
-    //   next : (data) => {
-    //     this.products = data;
-    //   },
-    //   error : (err) => {
-    //     this.errorMessage = err
-    //   }
-    // });
+    this.loadProducts();
 
-    // this.http.get<Array<Product>>("http://localhost:8888/INVENTORY-SERVICE/products").subscribe({
-    //   next : (data) => {
-    //     this.products = data;
-    //   },
-    //   error : (err)=> {
-    //
-    //   }
+    console.log("Products Object Here : " + this.products);
+  }
 
+  loadProducts() {
     this.inventoryService.getAllProducts().subscribe({
       next : (data) => {
         this.products = data;
@@ -43,21 +32,10 @@ export class ProductsComponent implements OnInit{
         console.log(err);
       }
     });
-
-    //   this.http.get<Array<Product>>("http://localhost:8888/INVENTORY-SERVICE/products").subscribe({
-    //     next : (data) => {
-    //       this.products = data;
-    //     },
-    //     error : (err)=> {
-    //       console.log(err);
-    //     }
-    // });
-
-    console.log("Products Object Here : " + this.products);
   }
 
-  // handleDelete(p: any) {
-  //   let index = this.products.indexOf(p);
-  //   this.products.splice(index, 1);
-  // }
+  handleDeleteProduct(productId : number) {
+    console.log("Test Delete Function")
+    this.inventoryService.deleteProduct(productId).subscribe(()=> this.loadProducts())
+  }
 }

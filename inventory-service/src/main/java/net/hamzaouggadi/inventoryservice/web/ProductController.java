@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
-//@CrossOrigin(origins = "*")
+//@CrossOrigin(methods = RequestMethod.DELETE)
 public class ProductController {
     private ProductService productService;
     @GetMapping("/products")
@@ -26,7 +26,7 @@ public class ProductController {
     public Product addProduct(@RequestBody Product product) {
         return productService.addProduct(product);
     }
-    @GetMapping("/products/deleteProduct/{productId}")
+    @DeleteMapping("/products/deleteProduct/{productId}")
     public void deleteProduct(@PathVariable Long productId) throws ProductException {
         productService.deleteProduct(productId);
     }
