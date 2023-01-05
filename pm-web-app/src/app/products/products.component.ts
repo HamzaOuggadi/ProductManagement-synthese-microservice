@@ -11,7 +11,7 @@ import {Observable} from "rxjs";
 })
 export class ProductsComponent implements OnInit{
 
-  products! : Array<Product>;
+  products! : Observable<Array<Product>>;
   errorMessage! : String;
   constructor(private http:HttpClient, private inventoryService:InventoryService) {
 
@@ -25,13 +25,16 @@ export class ProductsComponent implements OnInit{
   }
 
   loadProducts() {
-    this.inventoryService.getAllProducts().subscribe({
-      next : (data) => {
-        this.products = data;
-      }, error : (err) => {
-        console.log(err);
-      }
-    });
+
+    this.products = this.inventoryService.getAllProducts();
+
+    // this.inventoryService.getAllProducts().subscribe({
+    //   next : (data) => {
+    //     this.products = data;
+    //   }, error : (err) => {
+    //     console.log(err);
+    //   }
+    // });
   }
 
   handleDeleteProduct(productId : number) {
