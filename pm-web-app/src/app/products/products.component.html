@@ -30,7 +30,14 @@
                   <td>{{p.productDescription}}</td>
                   <td>{{p.productPrice}}</td>
                   <td>{{p.productQuantity}}</td>
-                  <td><button class="btn btn-primary me-2" [routerLink]="['/editProduct']"><i class="bi bi-pencil"></i> Edit</button><button class="btn btn-danger me-2" (click)="handleDeleteProduct(p.productId)"><i class="bi bi-trash"></i> Delete</button></td>
+                  <td>
+                    <button class="btn btn-primary me-2" [routerLink]="['/editProduct']">
+                      <i class="bi bi-pencil"></i> Edit
+                    </button>
+                    <button class="btn btn-danger me-2" (click)="handleDeleteProduct(p.productId)">
+                      <i class="bi bi-trash"></i> Delete
+                    </button>
+                  </td>
                 </tr>
                 </tbody>
               </table>
