@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {InventoryService} from "../services/inventory.service";
 import {Product} from "../model/product.model";
-import {Observable} from "rxjs";
+import {catchError, Observable, throwError} from "rxjs";
 
 @Component({
   selector: 'app-products',
@@ -25,9 +25,12 @@ export class ProductsComponent implements OnInit{
   }
 
   loadProducts() {
-
-    this.products = this.inventoryService.getAllProducts();
-
+    this.products = this.inventoryService.getAllProducts().pipe(
+      catchError(err => {
+        this.errorMessage = err.message;
+        return throwError(err);
+      })
+    );
     // this.inventoryService.getAllProducts().subscribe({
     //   next : (data) => {
     //     this.products = data;

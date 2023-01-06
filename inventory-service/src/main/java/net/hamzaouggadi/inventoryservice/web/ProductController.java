@@ -30,4 +30,9 @@ public class ProductController {
     public void deleteProduct(@PathVariable Long productId) throws ProductException {
         productService.deleteProduct(productId);
     }
+
+    @GetMapping("/products/search")
+    public List<Product> searchProduct(@RequestParam(name = "keyword") String keyword) {
+        return productService.searchProductByKeyword(keyword);
+    }
 }

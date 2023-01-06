@@ -36,6 +36,11 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
+    public List<Product> searchProductByKeyword(String keyword) {
+        return productRepository.findByProductNameContains(keyword);
+    }
+
+    @Override
     public void deleteProduct(Long productId) throws ProductException {
         productRepository.deleteById(productId);
     }
