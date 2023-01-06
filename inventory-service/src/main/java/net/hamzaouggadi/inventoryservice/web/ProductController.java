@@ -32,7 +32,7 @@ public class ProductController {
     }
 
     @GetMapping("/products/search")
-    public List<Product> searchProduct(@RequestParam(name = "keyword") String keyword) {
+    public List<Product> searchProduct(@RequestParam(name = "keyword", defaultValue = "") String keyword) {
         return productService.searchProductByKeyword(keyword);
     }
 }

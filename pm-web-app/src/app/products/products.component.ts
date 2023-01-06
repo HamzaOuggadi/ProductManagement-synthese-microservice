@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {InventoryService} from "../services/inventory.service";
 import {Product} from "../model/product.model";
 import {catchError, Observable, throwError} from "rxjs";
+import {FormBuilder, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-products',
@@ -13,11 +14,16 @@ export class ProductsComponent implements OnInit{
 
   products! : Observable<Array<Product>>;
   errorMessage! : String;
-  constructor(private http:HttpClient, private inventoryService:InventoryService) {
+  searchFormGroup! : FormGroup;
+  constructor(private http:HttpClient, private inventoryService:InventoryService, private fb:FormBuilder) {
 
   }
 
   ngOnInit(): void {
+
+    this.searchFormGroup = this.fb.group({
+      keyword : this.fb.control("")
+    });
 
     this.loadProducts();
 
@@ -43,5 +49,15 @@ export class ProductsComponent implements OnInit{
   handleDeleteProduct(productId : number) {
     console.log("Test Delete Function")
     this.inventoryService.deleteProduct(productId).subscribe(()=> this.loadProducts())
+  }
+
+  handleSearchProduct() {
+    let kw = this.searchFormGroup?.value.keyword
+    this.products = this.inventoryService.searchProductByKeyword(kw).pipe(
+      catchError(err => {
+        this.errorMessage = err.message;
+        return throwError(err)
+      })
+    );
   }
 }

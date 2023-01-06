@@ -10,5 +10,5 @@ import java.util.List;
 @RestResource
 //@CrossOrigin(origins = "*")
 public interface ProductRepository extends JpaRepository<Product, Long> {
-    List<Product> findByProductNameContains(String keyword);
+    List<Product> findByProductNameContainsIgnoreCase(String keyword);
 }

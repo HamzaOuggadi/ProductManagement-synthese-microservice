@@ -19,4 +19,8 @@ export class InventoryService {
   public deleteProduct(productId : number) : Observable<any> {
     return this.http.delete("http://localhost:8888/INVENTORY-SERVICE/products/deleteProduct/"+productId);
   }
+
+  public searchProductByKeyword(keyword : String) : Observable<Array<Product>> {
+    return this.http.get<Array<Product>>("http://localhost:8888/INVENTORY-SERVICE/products/search?keyword="+keyword);
+  }
 }
