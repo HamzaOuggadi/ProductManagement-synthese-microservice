@@ -36,6 +36,16 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
+    public Product editProduct(Product product) throws ProductException {
+        Product editedProduct = productRepository.findById(product.getProductId()).orElseThrow(() -> new ProductException("Product Not Found!"));
+        editedProduct.setProductName(product.getProductName());
+        editedProduct.setProductDescription(product.getProductDescription());
+        editedProduct.setProductPrice(product.getProductPrice());
+        editedProduct.setProductQuantity(product.getProductQuantity());
+        return productRepository.save(editedProduct);
+    }
+
+    @Override
     public List<Product> searchProductByKeyword(String keyword) {
         return productRepository.findByProductNameContainsIgnoreCase(keyword);
     }

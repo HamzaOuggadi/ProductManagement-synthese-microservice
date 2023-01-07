@@ -35,4 +35,8 @@ public class ProductController {
     public List<Product> searchProduct(@RequestParam(name = "keyword", defaultValue = "") String keyword) {
         return productService.searchProductByKeyword(keyword);
     }
+    @PutMapping("/products/editProduct")
+    public Product editProduct(@RequestBody Product product) throws ProductException {
+        return productService.editProduct(product);
+    }
 }
