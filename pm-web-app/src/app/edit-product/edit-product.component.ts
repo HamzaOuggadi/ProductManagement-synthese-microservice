@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {InventoryService} from "../services/inventory.service";
 import {Product} from "../model/product.model";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-edit-product',
@@ -12,14 +13,20 @@ import {Product} from "../model/product.model";
 export class EditProductComponent implements OnInit{
 
   editProductFormGroup! : FormGroup;
-  product! : Product;
+  editedProduct! : Product;
+
+  currentProductId! : number;
 
   constructor(private http : HttpClient,
               private fb:FormBuilder,
-              private inventoryService:InventoryService) {
+              private inventoryService:InventoryService,
+              private router:Router,
+              private activatedRoute:ActivatedRoute) {
   }
 
   ngOnInit(): void {
+
+    this.loadProduct(this.currentProductId);
 
     this.editProductFormGroup = this.fb.group({
       productName : this.fb.control(null),
@@ -30,6 +37,19 @@ export class EditProductComponent implements OnInit{
     });
   }
 
+  loadProduct(productId:number) {
+    this.inventoryService.getProductById(productId).pipe();
+  }
+
   handleEditProduct() {
+    this.editedProduct = this.editProductFormGroup.value;
+    this.inventoryService.editProduct(this.editedProduct).subscribe({
+      next : data => {
+        alert("Product Successfully Edited.")
+        this.router.navigate(["/products"]);
+      }, error : err => {
+        console.log(err);
+      }
+    })
   }
 }

@@ -4,11 +4,11 @@
       <div class="card">
         <div class="card-header bg-success bg-gradient">Add New Product</div>
         <div class="card-body">
-          <form action="">
+          <form [formGroup]="addProductFormGroup" (ngSubmit)="handleAddProduct()">
             <div class="row mb-3">
               <label class="form-label col-4" for="Product_Name">Product Name :</label>
               <div class="col-8">
-                <input class="form-control" type="text" id="Product_Name">
+                <input class="form-control" type="text" id="Product_Name" formControlName="productName">
               </div>
             </div>
             <div class="row mb-3">
@@ -16,25 +16,25 @@
               <div class="col-8">
                 <div class="input-group">
                   <span class="input-group-text bg-success bg-opacity-25">$</span>
-                  <input class="form-control" type="text" id="Product_Price">
+                  <input class="form-control" type="text" id="Product_Price" formControlName="productPrice">
                 </div>
               </div>
             </div>
             <div class="row mb-3">
               <label class="form-label col-4" for="Product_Quantity">Product Quantity :</label>
               <div class="col-8">
-                <input class="form-control" type="text" id="Product_Quantity">
+                <input class="form-control" type="text" id="Product_Quantity" formControlName="productQuantity">
               </div>
             </div>
             <div class="row mb-3">
               <label class="form-label col-4" for="Product_Description">Product Description :</label>
               <div class="col-8">
-                <textarea class="form-control" id="Product_Description"></textarea>
+                <textarea class="form-control" id="Product_Description" formControlName="productDescription"></textarea>
               </div>
             </div>
             <div class="row mb-3 justify-content-center">
               <div class="col-4">
-                <button class="btn btn-primary">Add Product</button>
+                <button [disabled]="!addProductFormGroup.valid" class="btn btn-primary">Add Product</button>
               </div>
             </div>
           </form>

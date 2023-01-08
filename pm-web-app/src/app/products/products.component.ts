@@ -4,6 +4,7 @@ import {InventoryService} from "../services/inventory.service";
 import {Product} from "../model/product.model";
 import {catchError, Observable, throwError} from "rxjs";
 import {FormBuilder, FormGroup} from "@angular/forms";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-products',
@@ -15,7 +16,11 @@ export class ProductsComponent implements OnInit{
   products! : Observable<Array<Product>>;
   errorMessage! : String;
   searchFormGroup! : FormGroup;
-  constructor(private http:HttpClient, private inventoryService:InventoryService, private fb:FormBuilder) {
+  product! : Product;
+  constructor(private http:HttpClient,
+              private inventoryService:InventoryService,
+              private fb:FormBuilder,
+              private activatedRoute:ActivatedRoute) {
 
   }
 
@@ -27,7 +32,10 @@ export class ProductsComponent implements OnInit{
 
     this.loadProducts();
 
-    console.log("Products Object Here : " + this.products);
+    this.activatedRoute.queryParams.subscribe(params => {
+      this.product.productId = params['productId']
+    })
+    // console.log("Products Object Here : " + this.products);
   }
 
   loadProducts() {

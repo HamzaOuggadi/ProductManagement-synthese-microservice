@@ -27,4 +27,12 @@ export class InventoryService {
   public editProduct(product : Product) {
     return this.http.put("http://localhost:8888/INVENTORY-SERVICE/products/editProduct", product);
   }
+
+  public addProduct(product : Product) {
+    return this.http.post("http://localhost:8888/INVENTORY-SERVICE/products/addProduct", product);
+  }
+
+  public getProductById(productId:number) : Observable<Product> {
+    return this.http.get<Product>("http://localhost:8888/INVENTORY-SERVICE/products/"+productId);
+  }
 }
