@@ -4,6 +4,7 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 import {InventoryService} from "../services/inventory.service";
 import {Product} from "../model/product.model";
 import {ActivatedRoute, Router} from "@angular/router";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-edit-product',
@@ -26,7 +27,13 @@ export class EditProductComponent implements OnInit{
 
   ngOnInit(): void {
 
-    this.loadProduct(this.currentProductId);
+    this.currentProductId = this.activatedRoute.snapshot.params['id'];
+
+    this.inventoryService.getProductById(this.currentProductId).subscribe({
+      next : value => {
+        this.editedProduct = value;
+      }
+    });
 
     this.editProductFormGroup = this.fb.group({
       productName : this.fb.control(null),
@@ -37,19 +44,21 @@ export class EditProductComponent implements OnInit{
     });
   }
 
-  loadProduct(productId:number) {
-    this.inventoryService.getProductById(productId).pipe();
-  }
+  // loadProduct(productId:number) {
+  //    this.editedProduct = this.inventoryService.getProductById(productId).subscribe({
+  //
+  //    });
+  // }
 
-  handleEditProduct() {
-    this.editedProduct = this.editProductFormGroup.value;
-    this.inventoryService.editProduct(this.editedProduct).subscribe({
-      next : data => {
-        alert("Product Successfully Edited.")
-        this.router.navigate(["/products"]);
-      }, error : err => {
-        console.log(err);
-      }
-    })
-  }
+  // handleEditProduct() {
+  //   this.editedProduct = this.editProductFormGroup.value;
+  //   this.inventoryService.editProduct(this.editedProduct).subscribe({
+  //     next : data => {
+  //       alert("Product Successfully Edited.")
+  //       this.router.navigate(["/products"]);
+  //     }, error : err => {
+  //       console.log(err);
+  //     }
+  //   })
+  // }
 }
