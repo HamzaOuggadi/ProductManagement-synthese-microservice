@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <div class="card">
+        <div class="card-header bg-success bg-gradient">Add New Customer</div>
+        <div class="card-body">
+          <form [formGroup]="addCustomerFormGroup" (ngSubmit)="handleAddCustomer()">
+            <div class="row mb-3">
+              <label class="form-label col-4" for="Customer_Name">Customer Name : </label>
+              <div class="col-8">
+                <input class="form-control col-8" type="text" id="Customer_Name" formControlName="customerName">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label class="form-label col-4" for="Customer_Email">Customer Email</label>
+              <div class="col-8">
+                <div class="input-group">
+                  <span class="input-group-text">@</span>
+                  <input class="form-control" type="text" id="Customer_Email" formControlName="customerEmail">
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-center mb-3">
+              <div class="col-4">
+                <button class="btn btn-primary">Add Customer</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
