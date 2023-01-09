@@ -8,5 +8,5 @@ import java.util.List;
 public interface CustomerService {
     List<Customer> listCustomers();
     Customer getCustomerById(Long customerId) throws CustomerException;
-    Customer addCustomer(Customer customer);
+    Customer addCustomer(Customer customer) throws CustomerException;
 }

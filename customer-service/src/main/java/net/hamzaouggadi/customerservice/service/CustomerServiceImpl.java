@@ -24,11 +24,15 @@ public class CustomerServiceImpl implements CustomerService{
     }
 
     @Override
-    public Customer addCustomer(Customer customer) {
-        Customer newCustomer = Customer.builder()
-                .customerName(customer.getCustomerName())
-                .customerEmail(customer.getCustomerEmail())
-                .build();
-        return customerRepository.save(newCustomer);
+    public Customer addCustomer(Customer customer) throws CustomerException {
+        if (customerRepository.findCustomerByCustomerEmail(customer.getCustomerEmail()) != null) {
+            throw new CustomerException("Customer Already Exists!");
+        } else {
+            Customer newCustomer = Customer.builder()
+                    .customerName(customer.getCustomerName())
+                    .customerEmail(customer.getCustomerEmail())
+                    .build();
+            return customerRepository.save(newCustomer);
+        }
     }
 }

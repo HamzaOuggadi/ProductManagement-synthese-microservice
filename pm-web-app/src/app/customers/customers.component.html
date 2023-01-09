@@ -12,7 +12,7 @@
               </tr>
               </thead>
               <tbody class="table-group-divider">
-              <tr *ngFor="let c of customers._embedded.customers">
+              <tr *ngFor="let c of customers | async">
                 <td>{{c.customerId}}</td>
                 <td>{{c.customerName}}</td>
                 <td>{{c.customerEmail}}</td>
