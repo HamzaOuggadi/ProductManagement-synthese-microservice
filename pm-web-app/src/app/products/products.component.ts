@@ -32,9 +32,6 @@ export class ProductsComponent implements OnInit{
 
     this.loadProducts();
 
-    this.activatedRoute.queryParams.subscribe(params => {
-      this.product.productId = params['productId']
-    })
     // console.log("Products Object Here : " + this.products);
   }
 

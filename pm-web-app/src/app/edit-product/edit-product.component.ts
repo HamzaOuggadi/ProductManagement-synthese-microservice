@@ -15,6 +15,7 @@ export class EditProductComponent implements OnInit{
 
   editProductFormGroup! : FormGroup;
   editedProduct! : Product;
+  savedProduct! : Product;
 
   currentProductId! : number;
 
@@ -29,11 +30,8 @@ export class EditProductComponent implements OnInit{
 
     this.currentProductId = this.activatedRoute.snapshot.params['id'];
 
-    this.inventoryService.getProductById(this.currentProductId).subscribe({
-      next : value => {
-        this.editedProduct = value;
-      }
-    });
+
+    console.log(this.editedProduct);
 
     this.editProductFormGroup = this.fb.group({
       productName : this.fb.control(null),
@@ -50,15 +48,16 @@ export class EditProductComponent implements OnInit{
   //    });
   // }
 
-  // handleEditProduct() {
-  //   this.editedProduct = this.editProductFormGroup.value;
-  //   this.inventoryService.editProduct(this.editedProduct).subscribe({
-  //     next : data => {
-  //       alert("Product Successfully Edited.")
-  //       this.router.navigate(["/products"]);
-  //     }, error : err => {
-  //       console.log(err);
-  //     }
-  //   })
-  // }
+  handleEditProduct() {
+    this.editedProduct = this.editProductFormGroup.value;
+    this.editedProduct.productId = this.currentProductId;
+    this.inventoryService.editProduct(this.editedProduct).subscribe({
+      next : data => {
+        alert("Product Successfully Edited.")
+        this.router.navigate(["/products"]);
+      }, error : err => {
+        console.log(err);
+      }
+    })
+  }
 }
