@@ -16,7 +16,7 @@
                 <td>{{c.customerId}}</td>
                 <td>{{c.customerName}}</td>
                 <td>{{c.customerEmail}}</td>
-                <td><button class="btn btn-success me-2">Bills</button><button class="btn btn-primary me-2">Edit</button><button class="btn btn-danger me-2">Delete</button></td>
+                <td><button class="btn btn-success me-2">Bills</button><button class="btn btn-primary me-2">Edit</button><button class="btn btn-danger me-2" (click)="handleDeleteCustomer(c.customerId)">Delete</button></td>
               </tr>
               </tbody>
             </table>

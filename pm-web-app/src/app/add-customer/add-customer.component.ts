@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {CustomerService} from "../services/customer.service";
 import {Customer} from "../model/customer.model";
 import {Router} from "@angular/router";
@@ -22,8 +22,8 @@ export class AddCustomerComponent implements OnInit{
   ngOnInit(): void {
 
     this.addCustomerFormGroup = this.fb.group({
-      customerName : this.fb.control(null),
-      customerEmail : this.fb.control(null)
+      customerName : this.fb.control(null, [Validators.required, Validators.minLength(3)]),
+      customerEmail : this.fb.control(null, [Validators.required, Validators.email])
     });
 
   }

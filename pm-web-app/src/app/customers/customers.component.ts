@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {catchError, Observable, throwError} from "rxjs";
 import {Customer} from "../model/customer.model";
 import {CustomerService} from "../services/customer.service";
 
@@ -15,12 +15,17 @@ export class CustomersComponent implements OnInit{
   }
   ngOnInit(): void {
 
-    this.customers = this.loadCustomers();
+    this.loadCustomers();
 
   }
 
-  loadCustomers() : Observable<Array<Customer>> {
-    return this.customerService.getAllCustomers();
+  loadCustomers() {
+    return this.customers = this.customerService.getAllCustomers().pipe(catchError(err => {
+      return throwError(err);
+    }));
   }
 
+  handleDeleteCustomer(customerId:number) {
+    this.customerService.deleteCustomerById(customerId).subscribe(()=>this.loadCustomers());
+  }
 }

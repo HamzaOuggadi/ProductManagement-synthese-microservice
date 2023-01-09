@@ -35,4 +35,13 @@ public class CustomerServiceImpl implements CustomerService{
             return customerRepository.save(newCustomer);
         }
     }
+
+    @Override
+    public void deleteCustomerById(Long customerID) throws CustomerException {
+        if (customerRepository.findById(customerID).isPresent()) {
+            customerRepository.deleteById(customerID);
+        } else {
+            throw new CustomerException("Customer Not Found!");
+        }
+    }
 }

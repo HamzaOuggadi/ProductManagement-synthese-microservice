@@ -9,4 +9,5 @@ public interface CustomerService {
     List<Customer> listCustomers();
     Customer getCustomerById(Long customerId) throws CustomerException;
     Customer addCustomer(Customer customer) throws CustomerException;
+    void deleteCustomerById(Long customerID) throws CustomerException;
 }

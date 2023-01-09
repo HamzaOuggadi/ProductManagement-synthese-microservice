@@ -20,4 +20,8 @@ export class CustomerService {
   public addCustomer(customer  : Customer) {
     return this.http.post("http://localhost:8888/CUSTOMER-SERVICE/customers/addCustomer", customer);
   }
+
+  public deleteCustomerById(customerId:number) {
+    return this.http.delete("http://localhost:8888/CUSTOMER-SERVICE/customers/deleteCustomer/"+customerId);
+  }
 }

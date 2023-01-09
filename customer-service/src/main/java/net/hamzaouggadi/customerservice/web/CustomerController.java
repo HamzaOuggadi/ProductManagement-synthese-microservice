@@ -24,4 +24,8 @@ public class CustomerController {
     public Customer addCustomer(@RequestBody Customer customer) throws CustomerException {
         return customerService.addCustomer(customer);
     }
+    @DeleteMapping("/customers/deleteCustomer/{customerId}")
+    public void deleteCustomerById(@PathVariable Long customerId) throws CustomerException {
+        customerService.deleteCustomerById(customerId);
+    }
 }
