@@ -4,7 +4,7 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 import {InventoryService} from "../services/inventory.service";
 import {Product} from "../model/product.model";
 import {ActivatedRoute, Router} from "@angular/router";
-import {Observable} from "rxjs";
+import {first, firstValueFrom, Observable} from "rxjs";
 
 @Component({
   selector: 'app-edit-product',
@@ -16,7 +16,6 @@ export class EditProductComponent implements OnInit{
   editProductFormGroup! : FormGroup;
   editedProduct! : Product;
   savedProduct! : Product;
-
   currentProductId! : number;
 
   constructor(private http : HttpClient,
@@ -24,29 +23,39 @@ export class EditProductComponent implements OnInit{
               private inventoryService:InventoryService,
               private router:Router,
               private activatedRoute:ActivatedRoute) {
+
   }
 
   ngOnInit(): void {
 
     this.currentProductId = this.activatedRoute.snapshot.params['id'];
 
+    //this.editedProduct = this.loadProduct(this.currentProductId);
 
-    console.log(this.editedProduct);
+    // this.inventoryService.getProductById(this.currentProductId).subscribe(p =>{
+    //   this.editedProduct = p;
+    // });
 
     this.editProductFormGroup = this.fb.group({
       productName : this.fb.control(null),
       productPrice : this.fb.control(null),
       productQuantity : this.fb.control(null),
       productDescription : this.fb.control(null)
-
     });
   }
 
-  // loadProduct(productId:number) {
-  //    this.editedProduct = this.inventoryService.getProductById(productId).subscribe({
-  //
-  //    });
-  // }
+  public async loadProduct(productId:number) : Promise<Product> {
+
+    return await firstValueFrom<Product>(this.inventoryService.getProductById(productId));
+
+     // this.inventoryService.getProductById(productId).subscribe({
+     //   next : data => {
+     //     this.editedProduct = data;
+     //     console.log(data);
+     //     console.log(this.editedProduct);
+     //   }
+     // });
+  }
 
   handleEditProduct() {
     this.editedProduct = this.editProductFormGroup.value;

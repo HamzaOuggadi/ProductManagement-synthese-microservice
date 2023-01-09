@@ -24,7 +24,7 @@ export class InventoryService {
     return this.http.get<Array<Product>>("http://localhost:8888/INVENTORY-SERVICE/products/search?keyword="+keyword);
   }
 
-  public editProduct(product: Product) {
+  public editProduct(product:Product) {
     return this.http.put("http://localhost:8888/INVENTORY-SERVICE/products/editProduct", product);
   }
 
