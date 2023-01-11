@@ -41,6 +41,7 @@ export class EditProductComponent implements OnInit{
         this.productPrice = this.savedProduct.productPrice;
         this.productQuantity = this.savedProduct.productQuantity;
         this.productDescription = this.savedProduct.productDescription;
+
       }, error : err => {
         console.log(err);
       }
