@@ -1,5 +1,6 @@
 package net.hamzaouggadi.billingservice.web;
 
+import jakarta.ws.rs.Path;
 import net.hamzaouggadi.billingservice.entities.Bill;
 import net.hamzaouggadi.billingservice.model.Customer;
 import net.hamzaouggadi.billingservice.repositories.BillRepository;
@@ -34,6 +35,11 @@ public class BillRestController {
         bill.getProductItems().forEach(pi->{
             pi.setProduct(productRestClient.findProductById(pi.getProductId()));
         });
+        return bill;
+    }
+    @GetMapping("/bills/byCustomerId/{customerId}")
+    public Bill getBillByCustomerId(@PathVariable Long customerId) {
+        Bill bill = billRepository.findByCustomerId(customerId);
         return bill;
     }
 }
