@@ -24,4 +24,8 @@ export class CustomerService {
   public deleteCustomerById(customerId:number) {
     return this.http.delete("http://localhost:8888/CUSTOMER-SERVICE/customers/deleteCustomer/"+customerId);
   }
+
+  public getCustomerById(customerId : number) : Observable<Customer>  {
+    return this.http.get<Customer>("http://localhost:8888/CUSTOMER-SERVICE/customers/"+customerId);
+  }
 }

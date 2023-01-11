@@ -2,9 +2,32 @@
   <div class="row justify-content-center">
     <div class="col-10">
       <div class="card">
-        <div class="card-header">Customer Bills</div>
+        <div class="card-header bg-success bg-gradient">Customer Bills</div>
         <div class="card-body">
-
+          <table class="table table-striped table-hover mb-3">
+            <thead class="table-success">
+              <tr>
+                <th>Bill Id</th><th>Bill Date</th><th>CustomerId</th><th>Customer Name</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+              <tr>
+                <td>{{bill.billId}}</td><td>{{bill.billDate}}</td><td>{{bill.customerId}}</td><td>{{customer.customerName}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-hover">
+            <thead class="table-success">
+              <tr>
+                <th>Product Item Id</th><th>Product Description</th><th>Product Quantity</th><th>Product Price</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+              <tr *ngFor="let pItem of bill.productItems">
+                <td>{{pItem.productItemId}}</td><td>{{pItem.productItemDescription}}</td><td>{{pItem.productItemQuantity}}</td><td>{{pItem.productItemPrice}}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

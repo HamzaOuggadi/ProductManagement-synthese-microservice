@@ -4,6 +4,8 @@ import {Observable} from "rxjs";
 import {Bill} from "../model/bill.model";
 import {BillingService} from "../services/billing.service";
 import {ActivatedRoute, Router} from "@angular/router";
+import {CustomerService} from "../services/customer.service";
+import {Customer} from "../model/customer.model";
 
 @Component({
   selector: 'app-bills',
@@ -12,24 +14,36 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class BillsComponent implements OnInit {
 
-  bill! : Observable<Bill>;
+  bill! : Bill;
   customerId! : number;
+  customer! : Customer;
   billId! : number;
   constructor(private http:HttpClient,
               private billingService:BillingService,
               private router:Router,
-              private activatedRoute:ActivatedRoute) {
+              private activatedRoute:ActivatedRoute,
+              private customerService:CustomerService) {
   }
   ngOnInit(): void {
 
     this.customerId = this.activatedRoute.snapshot.params['id'];
 
-    this.bill = this.loadBillByCustomerId(this.customerId);
+    this.customerService.getCustomerById(this.customerId).subscribe({
+      next : data => {
+        this.customer = data;
+      }
+    })
+
+    this.loadBillByCustomerId(this.customerId).subscribe({
+      next : data => {
+        this.bill = data;
+      }
+    });
 
   }
 
   loadBillByCustomerId(customerId:number) : Observable<Bill> {
-    return this.billingService.getFullBill(customerId);
+    return this.billingService.getBillByCustomerId(customerId);
   }
 
 }

@@ -45,6 +45,7 @@ export class ProductsComponent implements OnInit{
     // this.inventoryService.getAllProducts().subscribe({
     //   next : (data) => {
     //     this.products = data;
+    //
     //   }, error : (err) => {
     //     console.log(err);
     //   }
