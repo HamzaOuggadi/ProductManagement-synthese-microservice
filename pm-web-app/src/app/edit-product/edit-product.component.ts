@@ -17,6 +17,10 @@ export class EditProductComponent implements OnInit{
   editedProduct! : Product;
   savedProduct! : Product;
   currentProductId! : number;
+  productName! : string;
+  productPrice! : number;
+  productQuantity! : number;
+  productDescription! : string;
 
   constructor(private http : HttpClient,
               private fb:FormBuilder,
@@ -30,7 +34,17 @@ export class EditProductComponent implements OnInit{
 
     this.currentProductId = this.activatedRoute.snapshot.params['id'];
 
-    //this.editedProduct = this.loadProduct(this.currentProductId);
+    this.inventoryService.getProductById(this.currentProductId).subscribe({
+      next : data => {
+        this.savedProduct = data;
+        this.productName = this.savedProduct.productName;
+        this.productPrice = this.savedProduct.productPrice;
+        this.productQuantity = this.savedProduct.productQuantity;
+        this.productDescription = this.savedProduct.productDescription;
+      }, error : err => {
+        console.log(err);
+      }
+    });
 
     // this.inventoryService.getProductById(this.currentProductId).subscribe(p =>{
     //   this.editedProduct = p;
@@ -44,18 +58,18 @@ export class EditProductComponent implements OnInit{
     });
   }
 
-  public async loadProduct(productId:number) : Promise<Product> {
-
-    return await firstValueFrom<Product>(this.inventoryService.getProductById(productId));
-
-     // this.inventoryService.getProductById(productId).subscribe({
-     //   next : data => {
-     //     this.editedProduct = data;
-     //     console.log(data);
-     //     console.log(this.editedProduct);
-     //   }
-     // });
-  }
+  // public async loadProduct(productId:number) : Promise<Product> {
+  //
+  //   return await firstValueFrom<Product>(this.inventoryService.getProductById(productId));
+  //
+  //    // this.inventoryService.getProductById(productId).subscribe({
+  //    //   next : data => {
+  //    //     this.editedProduct = data;
+  //    //     console.log(data);
+  //    //     console.log(this.editedProduct);
+  //    //   }
+  //    // });
+  // }
 
   handleEditProduct() {
     this.editedProduct = this.editProductFormGroup.value;
