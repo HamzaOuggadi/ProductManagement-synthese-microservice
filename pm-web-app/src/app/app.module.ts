@@ -12,6 +12,19 @@ import {ReactiveFormsModule} from "@angular/forms";
 import { AddProductComponent } from './add-product/add-product.component';
 import { HomeComponent } from './home/home.component';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
+import {KeycloakAngularModule, KeycloakService} from "keycloak-angular";
+
+export function kcFactory(kcService : KeycloakService) {
+  return ()=>{
+    kcService.init({
+      config : {
+        realm : "pm-realm",
+        clientId : "customer-service-client",
+        url : "http://localhost:8080/"
+      }
+    })
+  }
+}
 
 @NgModule({
   declarations: [
@@ -28,7 +41,8 @@ import { AddCustomerComponent } from './add-customer/add-customer.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    KeycloakAngularModule
   ],
   providers: [],
   bootstrap: [AppComponent]
