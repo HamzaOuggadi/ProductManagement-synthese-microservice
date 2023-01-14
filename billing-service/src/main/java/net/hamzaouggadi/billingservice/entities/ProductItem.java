@@ -1,12 +1,13 @@
 package net.hamzaouggadi.billingservice.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.hamzaouggadi.billingservice.model.Product;
+
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -14,7 +15,8 @@ import net.hamzaouggadi.billingservice.model.Product;
 @NoArgsConstructor
 @Builder
 public class ProductItem {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long productItemId;
     private Long productId;
     private String productItemDescription;

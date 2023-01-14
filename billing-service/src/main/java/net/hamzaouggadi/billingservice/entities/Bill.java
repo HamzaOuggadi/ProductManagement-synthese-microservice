@@ -1,13 +1,13 @@
 package net.hamzaouggadi.billingservice.entities;
 
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.hamzaouggadi.billingservice.model.Customer;
 
+import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 @Entity
@@ -16,7 +16,8 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 public class Bill {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long billId;
     private Date billDate;
     private Long customerId;

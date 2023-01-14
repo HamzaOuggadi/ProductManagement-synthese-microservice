@@ -1,6 +1,6 @@
 package net.hamzaouggadi.billingservice.web;
 
-import jakarta.ws.rs.Path;
+
 import net.hamzaouggadi.billingservice.entities.Bill;
 import net.hamzaouggadi.billingservice.model.Customer;
 import net.hamzaouggadi.billingservice.repositories.BillRepository;
