@@ -221,7 +221,6 @@ Project Link: [https://github.com/HamzaOuggadi/ProductManagement-synthese-micros
 ## Acknowledgments
 
 * [Pr. Mohamed Youssfi - Université Hassan II - ENSET Mohammedia](https://www.youtube.com/@mohamedYoussfi)
-* @mohamedYoussfi
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
