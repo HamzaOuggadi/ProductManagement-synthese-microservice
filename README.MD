@@ -41,7 +41,7 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#screenshots">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
@@ -64,6 +64,7 @@
 <p>This Project was made as a synthesis for the Microservices Module during my studies.</p>
 <p>Contrary to the Monolithic Architecture, Microservices allows us to build Scalable and well Maintainable Software.</p>
 <p>Please find below the Technologies used for this Project.</p>
+<p>Later the Microservices were secured using Keycloak v20.0.3</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -71,7 +72,7 @@
 
 ### Built With
 
-* [![Java][Java.com]][Angular-url]
+* [![Java][Java.com]][Java-url]
 * [![Spring][Spring.io]][Spring-url]
 * [![SpringSecurity][SpringSecurity.io]][Spring-url]
 * [![Angular][Angular.io]][Angular-url]
@@ -93,20 +94,28 @@
     <li>Frontend</li>
 </ul>
 
-<p>Diagrams for each Microservice : </p>
+<h3>Diagrams for each Microservice : </h3>
 
-<ul>
-    <li>Customer Service : </li>
-    <img src="/screenshots/CustomerService.png" alt="">
-    <li>Inventory Service : </li>
-    <img src="/screenshots/InventoryService.png" alt="">
-    <li>Billing Service : </li>
-    <img src="/screenshots/BillingService.png" alt="">
-    <li>Gateway Service :</li>
-    <img src="/screenshots/GatewayService.png" alt="">
-    <li>Discovery Service :</li>
-    <img src="/screenshots/DiscoveryService.png" alt="">
-</ul>
+<h4>Customer Microservice</h4>
+
+<img src="/screenshots/CustomerService.png" alt="">
+
+<h4>Inventory Service</h4>
+
+<img src="/screenshots/InventoryService.png" alt="">
+
+<h4>Billing Service</h4>
+
+<img src="/screenshots/BillingService.png" alt="">
+
+<h4>Gateway Service</h4>
+
+<img src="/screenshots/GatewayService.png" alt="">
+
+<h4>Discovery Service</h4>
+
+<img src="/screenshots/DiscoveryService.png" alt="">
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -114,7 +123,7 @@
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## screenshots
 
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
@@ -202,7 +211,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - hamza.ouggadi@gmail.com@hamza.ouggadi@gmail.com_client.com
+Hamza Ouggadi - [@twitter_handle](https://twitter.com/twitter_handle) - hamza.ouggadi@gmail.com@hamza.ouggadi@gmail.com_client.com
 
 Project Link: [https://github.com/HamzaOuggadi/ProductManagement-synthese-microservice](https://github.com/HamzaOuggadi/ProductManagement-synthese-microservice)
 
