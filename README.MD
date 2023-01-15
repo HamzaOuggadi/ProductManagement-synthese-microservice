@@ -35,15 +35,10 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#screenshots">Screenshots</a>
-    </li>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="class_diagrams">Class Diagrams</a></li>
+    <li><a href="#screenshots">Screenshots</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -89,7 +84,7 @@
     <li>Frontend</li>
 </ul>
 
-## Diagrams for each Microservice :
+## Class Diagrams :
 
 <h4 align="center">Customer Microservice</h4>
 
