@@ -156,9 +156,7 @@ populated with the given products for demonstration purposes, so no need to acce
 Then I've configured it with a New Realm named <b><em>pm-realm</em></b> and a new client <b><em>pm-client</em></b></p>
 
 ```dockerfile
-
-<b>docker</b> run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:20.0.3 start-dev
-
+docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:20.0.3 start-dev
 ```
 
 <p>The <mark><b>KEYCLOAK_ADMIN</b></mark> and <mark><b>KEYCLOAK_ADMIN_PASSWORD</b></mark> are Keycloak native parameters for the admin console, they can be changed later.</p>
