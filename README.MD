@@ -37,8 +37,9 @@
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#built-with">Built With</a></li>
-    <li><a href="#class-diagrams">Class Diagrams</a></li>
     <li><a href="#screenshots">Screenshots</a></li>
+    <li><a href="#installation-and-usage">Installation and usage</a></li>
+    <li><a href="#class-diagrams">Class Diagrams</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -82,34 +83,6 @@
 <ul>
     <li>Frontend</li>
 </ul>
-
-## Class Diagrams
-
-<h4 align="center">Customer Microservice</h4>
-
-<img src="/screenshots/CustomerService.png" alt="">
-
-<h4 align="center">Inventory Service</h4>
-
-<img src="/screenshots/InventoryService.png" alt="">
-
-<h4 align="center">Billing Service</h4>
-
-<img src="/screenshots/BillingService.png" alt="">
-
-<h4 align="center">Gateway Service</h4>
-
-<img src="/screenshots/GatewayService.png" alt="">
-
-<h4 align="center">Discovery Service</h4>
-
-<img src="/screenshots/DiscoveryService.png" alt="">
-
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 
 ## Screenshots
@@ -190,6 +163,34 @@ Code Snippet example of the authorization :
         return customerService.listCustomers();
     }
 ```
+
+
+## Class Diagrams
+
+<h4 align="center">Customer Microservice</h4>
+
+<img src="/screenshots/CustomerService.png" alt="">
+
+<h4 align="center">Inventory Service</h4>
+
+<img src="/screenshots/InventoryService.png" alt="">
+
+<h4 align="center">Billing Service</h4>
+
+<img src="/screenshots/BillingService.png" alt="">
+
+<h4 align="center">Gateway Service</h4>
+
+<img src="/screenshots/GatewayService.png" alt="">
+
+<h4 align="center">Discovery Service</h4>
+
+<img src="/screenshots/DiscoveryService.png" alt="">
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## Contributing
 
