@@ -28,10 +28,10 @@
   </p>
 </div>
 
+> 
 > **Note**
-> This Project is still under construction adn continuous improvement.
-> Nothing is final.
-
+> This Project is still under construction and continuous improvement, nothing is final.
+>  
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
