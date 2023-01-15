@@ -155,7 +155,7 @@ populated with the given products for demonstration purposes, so no need to acce
 <p>Keycloak on the other hand, was deployed on a docker container and port bound to the Host Machine at port 8080.
 Then I've configured it with a New Realm named <b><em>pm-realm</em></b> and a new client <b><em>pm-client</em></b></p>
 
-```shell
+```dockerfile
 
 docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:20.0.3 start-dev
 
