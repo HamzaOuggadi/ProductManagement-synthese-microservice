@@ -153,13 +153,14 @@ populated with the given products for demonstration purposes, so no need to acce
 <p>The Frontend was made with Angular. NodeJS and Angular installation is needed as well as Keycloak for Angular.</p>
 
 <p>Keycloak on the other hand, was deployed on a docker container and port bound to the Host Machine at port 8080.
-Then I've configured it with a New Realm named **pm-realm** and a new client **pm-client**</p>
+Then I've configured it with a New Realm named <b>pm-realm</b> and a new client <b>pm-client</b></p>
 
 ```shell
-docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:20.0.3 start-dev
+docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin 
+quay.io/keycloak/keycloak:20.0.3 start-dev
 ```
 
-<p>The <b>KEYCLOAK_ADMIN</b> and <b>KEYCLOAK_ADMIN_PASSWORD</b> are Keycloak native parameters for the admin console, they can be changed later.</p>
+<p>The <mark><b>KEYCLOAK_ADMIN</b></mark> and <mark><b>KEYCLOAK_ADMIN_PASSWORD</b></mark> are Keycloak native parameters for the admin console, they can be changed later.</p>
 
 ## Contributing
 
