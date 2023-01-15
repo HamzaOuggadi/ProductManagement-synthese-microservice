@@ -70,7 +70,6 @@
 * [![Keycloak][keycloak.org]][Keycloak-url]
 
 
-<br/>
 <p>This Project was divided to 5 Microservices + The Frontend : </p>
 
 <ul>
@@ -84,7 +83,7 @@
     <li>Frontend</li>
 </ul>
 
-### Class Diagrams
+## Class Diagrams
 
 <h4 align="center">Customer Microservice</h4>
 
@@ -112,7 +111,7 @@
 
 
 
-<!-- GETTING STARTED -->
+
 ## Screenshots
 
 Screenshots from the Web Application :
