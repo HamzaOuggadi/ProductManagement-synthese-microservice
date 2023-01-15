@@ -153,7 +153,7 @@ populated with the given products for demonstration purposes, so no need to acce
 <p>The Frontend was made with Angular. NodeJS and Angular installation is needed as well as Keycloak for Angular.</p>
 
 <p>Keycloak on the other hand, was deployed on a docker container and port bound to the Host Machine at port 8080.
-Then I've configured it with a New Realm named <b>_pm-realm_</b> and a new client <b>_pm-client_</b></p>
+Then I've configured it with a New Realm named <b><em>pm-realm</em></b> and a new client <b><em>pm-client</em></b></p>
 
 ```shell
 docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin 
