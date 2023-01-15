@@ -28,10 +28,9 @@
   </p>
 </div>
 
-> 
+
 > **Note**
 > This Project is still under construction and continuous improvement, nothing is final.
->  
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -96,7 +95,7 @@
     <li>Frontend</li>
 </ul>
 
-<h3>Diagrams for each Microservice : </h3>
+## Diagrams for each Microservice :
 
 <h4 align="center">Customer Microservice</h4>
 
@@ -153,36 +152,7 @@ Screenshots from the Web Application :
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/HamzaOuggadi/ProductManagement-synthese-microservice/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
 ## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
@@ -196,20 +166,10 @@ Don't forget to give the project a star! Thanks again!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- CONTACT -->
 ## Contact
 
-Hamza Ouggadi - [@twitter_handle](https://twitter.com/twitter_handle) - hamza.ouggadi@gmail.com@hamza.ouggadi@gmail.com_client.com
+Hamza Ouggadi - hamza.ouggadi@gmail.com
 
 Project Link: [https://github.com/HamzaOuggadi/ProductManagement-synthese-microservice](https://github.com/HamzaOuggadi/ProductManagement-synthese-microservice)
 
@@ -220,9 +180,8 @@ Project Link: [https://github.com/HamzaOuggadi/ProductManagement-synthese-micros
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* [Pr. Mohamed Youssfi](https://www.youtube.com/@mohamedYoussfi)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
