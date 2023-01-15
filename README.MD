@@ -177,7 +177,7 @@ Code Snippet example of the authorization :
 
 <h4 align="center">Billing Service</h4>
 
-<img src="/screenshots/BillingService.png" alt="">
+<img src="/screenshots/bil.png" alt="">
 
 <h4 align="center">Gateway Service</h4>
 
