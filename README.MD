@@ -159,7 +159,7 @@ Then I've configured it with a New Realm named **pm-realm** and a new client **p
 docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:20.0.3 start-dev
 ```
 
-<p>The **KEYCLOAK_ADMIN** and **KEYCLOAK_ADMIN_PASSWORD** are Keycloak native parameters for the admin console, they can be changed later.</p>
+<p>The <b>KEYCLOAK_ADMIN</b> and <b>KEYCLOAK_ADMIN_PASSWORD</b> are Keycloak native parameters for the admin console, they can be changed later.</p>
 
 ## Contributing
 
