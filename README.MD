@@ -147,7 +147,7 @@ populated with the given products for demonstration purposes, so no need to acce
 
 <p>The Frontend was made with Angular. NodeJS and Angular installation is needed as well as Keycloak for Angular.</p>
 
-```jshelllanguage
+```javascript
 npm install keycloak-angular keycloak-js
 ```
 
