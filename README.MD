@@ -156,11 +156,31 @@ populated with the given products for demonstration purposes, so no need to acce
 Then I've configured it with a New Realm named <b><em>pm-realm</em></b> and a new client <b><em>pm-client</em></b></p>
 
 ```shell
-docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin 
-quay.io/keycloak/keycloak:20.0.3 start-dev
+
+docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:20.0.3 start-dev
+
 ```
 
 <p>The <mark><b>KEYCLOAK_ADMIN</b></mark> and <mark><b>KEYCLOAK_ADMIN_PASSWORD</b></mark> are Keycloak native parameters for the admin console, they can be changed later.</p>
+
+<p>As per the users, 3 were made, one Admin and two Users. Admin has access to all the Data on the application, as for users,only limited access is given.
+This difference of authorization can be seen on the backend, in the <em><b>CustomerController</b></em> Class as an example, as per picture below : </p>
+
+<img src="/screenshots/CustomerController.png">
+
+Code Snippet example of the authorization :
+
+```java
+
+    @PostMapping("/customers/addCustomer")
+    @PreAuthorize("hasAuthority('Admin')")
+    public Customer addCustomer(@RequestBody Customer customer) throws CustomerException {
+        return customerService.addCustomer(customer);
+    }
+    
+```
+
+<p>Only Admins have the possibility to add a customer, as can be seen with annotation <em><b>@PreAuthorize("hasAuthority('Admin)")</b></em>.</p>
 
 ## Contributing
 
