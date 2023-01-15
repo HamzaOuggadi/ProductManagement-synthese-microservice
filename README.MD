@@ -163,7 +163,7 @@ docker run -p 8080:8080 \
 
 <p>The <mark><b>KEYCLOAK_ADMIN</b></mark> and <mark><b>KEYCLOAK_ADMIN_PASSWORD</b></mark> are Keycloak native parameters for the admin console, they can be changed later.</p>
 
-<p>As per the users, 3 were made, one Admin and two Users. Admin has access to all the Data on the application, as for users,only limited access is given.
+<p>As per the users, 3 were made, one Admin and two Users. Admin has access to all the Data on the application, as for users, only limited access is given.
 This difference of authorization can be seen on the backend, in the <em><b>CustomerController</b></em> Class as an example, as per picture below : </p>
 
 <img src="/screenshots/CustomerController.png">
@@ -179,7 +179,7 @@ Code Snippet example of the authorization :
     }
 ```
 
-<p>Only Admins have the possibility to add a customer, as can be seen with annotation <em><b>@PreAuthorize("hasAuthority('Admin)")</b></em>.</p>
+<p>Only Admins have the possibility to add a customer, as can be seen with annotation <em><b>@PreAuthorize("hasAuthority('Admin')")</b></em>.</p>
 
 <p>On the other hand, a simple user can only check the customers list :</p>
 
