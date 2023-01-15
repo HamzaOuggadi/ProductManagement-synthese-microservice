@@ -9,7 +9,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/HamzaOuggadi/ProductManagement-synthese-microservice">
-    <img src="/screenshots/img.png" alt="Logo" width="80" height="80">
+    <img src="/screenshots/img.png" alt="Logo">
   </a>
 
 <h3 align="center">Product and Customer Management</h3>
