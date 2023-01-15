@@ -133,8 +133,14 @@ Screenshots from the Web Application :
 <h4 align="center">Products Page</h4>
 <img src="/screenshots/ProductList.png" alt="">
 
+<h4 align="center">Edit Product Page</h4>
+<img src="/screenshots/EditProductPage.png" alt="">
+
 <h4 align="center">Customers List Page</h4>
 <img src="/screenshots/CustomerList.png" alt="">
+
+<h4 align="center">Add Customer Page</h4>
+<img src="/screenshots/AddCustomer.png" alt="">
 
 <h4 align="center">Authentication Panel</h4>
 <img src="/screenshots/AuthPanel.png" alt="">
