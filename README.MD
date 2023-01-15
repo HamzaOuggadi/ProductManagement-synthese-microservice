@@ -78,6 +78,37 @@
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![Docker][Docker.com]][Docker-url]
 
+
+<br/>
+<p>This Project was divided to 5 Microservices + The Frontend : </p>
+
+<ul>
+    <li>Gateway-Service</li>
+    <li>Discovery-Service</li>
+    <li>Customer-Service</li>
+    <li>Inventory-Service</li>
+    <li>Billing-Service</li>
+</ul>
+<ul>
+    <li>Frontend</li>
+</ul>
+
+<p>Diagrams for each Microservice : </p>
+
+<ul>
+    <li>Customer Service : </li>
+    <img src="/screenshots/CustomerService.png" alt="">
+    <li>Inventory Service : </li>
+    <img src="/screenshots/InventoryService.png" alt="">
+    <li>Billing Service : </li>
+    <img src="/screenshots/BillingService.png" alt="">
+    <li>Gateway Service :</li>
+    <img src="/screenshots/GatewayService.png" alt="">
+    <li>Discovery Service :</li>
+    <img src="/screenshots/DiscoveryService.png" alt="">
+</ul>
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
