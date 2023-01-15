@@ -177,10 +177,19 @@ Code Snippet example of the authorization :
     public Customer addCustomer(@RequestBody Customer customer) throws CustomerException {
         return customerService.addCustomer(customer);
     }
-    
 ```
 
 <p>Only Admins have the possibility to add a customer, as can be seen with annotation <em><b>@PreAuthorize("hasAuthority('Admin)")</b></em>.</p>
+
+<p>On the other hand, a simple user can only check the customers list :</p>
+
+```java
+    @GetMapping("/customers")
+    @PreAuthorize("hasAuthority('User')")
+    public List<Customer> getCustomerList() {
+        return customerService.listCustomers();
+    }
+```
 
 ## Contributing
 
