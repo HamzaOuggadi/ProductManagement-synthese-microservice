@@ -147,6 +147,10 @@ populated with the given products for demonstration purposes, so no need to acce
 
 <p>The Frontend was made with Angular. NodeJS and Angular installation is needed as well as Keycloak for Angular.</p>
 
+```jshelllanguage
+npm install keycloak-angular keycloak-js
+```
+
 <p>Keycloak on the other hand, was deployed on a docker container and port bound to the Host Machine at port 8080.
 Then I've configured it with a New Realm named <b><em>pm-realm</em></b> and a new client <b><em>pm-client</em></b></p>
 
