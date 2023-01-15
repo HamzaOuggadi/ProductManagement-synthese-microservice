@@ -19,7 +19,7 @@ public class CustomerController {
         return customerService.listCustomers();
     }
     @GetMapping("/customers/{customerId}")
-    @PreAuthorize("hasAuthority('Admin')")
+//    @PreAuthorize("hasAuthority('User')")
     public Customer getCustomerById(@PathVariable Long customerId) throws CustomerException {
         return customerService.getCustomerById(customerId);
     }
