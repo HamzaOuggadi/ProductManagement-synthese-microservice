@@ -43,10 +43,6 @@
     </li>
     <li>
       <a href="#screenshots">Screenshots</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
     </li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -149,6 +145,22 @@ Screenshots from the Web Application :
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+## Installation and Usage
+
+<p>At startup the Backend will generate 4 customers, 40 Products and bills for each customer that have been
+populated with the given products for demonstration purposes, so no need to access the Database to add or modify anything.</p>
+
+<p>The Frontend was made with Angular. NodeJS and Angular installation is needed as well as Keycloak for Angular.</p>
+
+<p>Keycloak on the other hand, was deployed on a docker container and port bound to the Host Machine at port 8080.
+Then I've configured it with a New Realm named **pm-realm** and a new client **pm-client**</p>
+
+```shell
+docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:20.0.3 start-dev
+```
+
+<p>The **KEYCLOAK_ADMIN** and **KEYCLOAK_ADMIN_PASSWORD** are Keycloak native parameters for the admin console, they can be changed later.</p>
+
 ## Contributing
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
@@ -177,7 +189,7 @@ Project Link: [https://github.com/HamzaOuggadi/ProductManagement-synthese-micros
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [Pr. Mohamed Youssfi](https://www.youtube.com/@mohamedYoussfi)
+* [Pr. Mohamed Youssfi - Université Hassan II - ENSET Mohammedia](https://www.youtube.com/@mohamedYoussfi)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
