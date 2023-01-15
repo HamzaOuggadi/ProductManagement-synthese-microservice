@@ -1,6 +1,8 @@
 <h1>Product and Customer Management</h1>
-<h3>Project Structure</h3>
-<img src="/screenshots/Product_Structure.png" alt="Project Structure">
+
+[//]: # (<h3>Project Structure</h3>)
+
+[//]: # (<img src="/screenshots/Product_Structure.png" alt="Project Structure">)
 
 
 <!-- PROJECT LOGO -->
