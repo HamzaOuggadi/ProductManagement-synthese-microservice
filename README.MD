@@ -15,7 +15,7 @@
 <h3 align="center">Product and Customer Management</h3>
 
   <p align="center">
-    project_description
+    Web App for Product and Customer Management
     <br />
     <a href="https://github.com/HamzaOuggadi/ProductManagement-synthese-microservice"><strong>Explore the docs »</strong></a>
     <br />
@@ -61,7 +61,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `HamzaOuggadi`, `ProductManagement-synthese-microservice`, `twitter_handle`, `linkedin_username`, `hamza.ouggadi@gmail.com_client`, `hamza.ouggadi@gmail.com`, `Product and Customer Management`, `project_description`
+<p>This Project was made as a synthesis for the Microservices Module during my studies.</p>
+<p>Contrary to the Monolithic Architecture, Microservices allows us to build Scalable and well Maintainable Software.</p>
+<p>Please find below the Technologies used for this Project.</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -69,9 +71,12 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [![Java][java.com]][Java-url]
+* [![Java][Java.com]][Angular-url]
+* [![Spring][Spring.io]][Spring-url]
+* [![SpringSecurity][SpringSecurity.io]][Spring-url]
 * [![Angular][Angular.io]][Angular-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![Docker][Docker.com]][Docker-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -218,3 +223,8 @@ Project Link: [https://github.com/HamzaOuggadi/ProductManagement-synthese-micros
 [JQuery-url]: https://jquery.com 
 [Java.com]: https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white
 [Java-url]: https://www.java.com
+[Spring.io]: https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white
+[Spring-url]: https://www.spring.io
+[SpringSecurity.io]: https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=Spring-Security&logoColor=white
+[Docker-url]: https://www.docker.com
+[Docker.com]: https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white
