@@ -72,6 +72,7 @@
 * [![Angular][Angular.io]][Angular-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![Docker][Docker.com]][Docker-url]
+* [![Keycloak][keycloak.org]][Keycloak-url]
 
 
 <br/>
@@ -262,3 +263,5 @@ Project Link: [https://github.com/HamzaOuggadi/ProductManagement-synthese-micros
 [SpringSecurity.io]: https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=Spring-Security&logoColor=white
 [Docker-url]: https://www.docker.com
 [Docker.com]: https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white
+[Keycloak-url]: https://www.keycloak.org/
+[Keycloak.org]: https://www.keycloak.org/resources/images/keycloak_logo_200px.svg
