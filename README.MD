@@ -71,7 +71,7 @@
 * [![Keycloak][keycloak.org]][Keycloak-url]
 
 
-<p>This Project was divided to 5 Microservices + The Frontend : </p>
+<p>This Project is composed of 5 Microservices + The Frontend : </p>
 
 <ul>
     <li>Gateway-Service</li>
