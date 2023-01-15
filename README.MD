@@ -28,7 +28,9 @@
   </p>
 </div>
 
-
+> **Note**
+> This Project is still under construction adn continuous improvement.
+> Nothing is final.
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -147,30 +149,6 @@ Screenshots from the Web Application :
 
 <h4 align="center">Bill Page</h4>
 <img src="/screenshots/Bill.png" alt="">
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/HamzaOuggadi/ProductManagement-synthese-microservice.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
