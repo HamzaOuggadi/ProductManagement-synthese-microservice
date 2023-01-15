@@ -84,7 +84,7 @@
     <li>Frontend</li>
 </ul>
 
-## Class Diagrams
+### Class Diagrams
 
 <h4 align="center">Customer Microservice</h4>
 
