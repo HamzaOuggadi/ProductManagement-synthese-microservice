@@ -41,7 +41,7 @@
       </ul>
     </li>
     <li>
-      <a href="#screenshots">Getting Started</a>
+      <a href="#screenshots">Screenshots</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
@@ -96,23 +96,23 @@
 
 <h3>Diagrams for each Microservice : </h3>
 
-<h4>Customer Microservice</h4>
+<h4 align="center">Customer Microservice</h4>
 
 <img src="/screenshots/CustomerService.png" alt="">
 
-<h4>Inventory Service</h4>
+<h4 align="center">Inventory Service</h4>
 
 <img src="/screenshots/InventoryService.png" alt="">
 
-<h4>Billing Service</h4>
+<h4 align="center">Billing Service</h4>
 
 <img src="/screenshots/BillingService.png" alt="">
 
-<h4>Gateway Service</h4>
+<h4 align="center">Gateway Service</h4>
 
 <img src="/screenshots/GatewayService.png" alt="">
 
-<h4>Discovery Service</h4>
+<h4 align="center">Discovery Service</h4>
 
 <img src="/screenshots/DiscoveryService.png" alt="">
 
@@ -123,10 +123,24 @@
 
 
 <!-- GETTING STARTED -->
-## screenshots
+## Screenshots
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Screenshots from the Web Application :
+
+<h4 align="center">Home Page</h4>
+<img src="/screenshots/HomePage.png" alt="">
+
+<h4 align="center">Products Page</h4>
+<img src="/screenshots/ProductList.png" alt="">
+
+<h4 align="center">Customers List Page</h4>
+<img src="/screenshots/CustomerList.png" alt="">
+
+<h4 align="center">Authentication Panel</h4>
+<img src="/screenshots/AuthPanel.png" alt="">
+
+<h4 align="center">Bill Page</h4>
+<img src="/screenshots/Bill.png" alt="">
 
 ### Prerequisites
 
