@@ -20,6 +20,6 @@ export class AppComponent {
   }
 
   logout() {
-
+    this.securityService.kcService.logout(window.location.origin);
   }
 }
