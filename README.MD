@@ -20,7 +20,7 @@
     <a href="https://github.com/HamzaOuggadi/ProductManagement-synthese-microservice"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/HamzaOuggadi/ProductManagement-synthese-microservice">View Demo</a>
+    <a href="https://github.com/HamzaOuggadi/ProductManagement-synthese-microservice">View Demo <em>(Under Construction)</em></a>
     ·
     <a href="https://github.com/HamzaOuggadi/ProductManagement-synthese-microservice/issues">Report Bug</a>
     ·
