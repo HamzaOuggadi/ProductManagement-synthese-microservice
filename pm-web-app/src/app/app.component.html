@@ -27,17 +27,36 @@
             <li><a class="dropdown-item" routerLink="/addProduct">Add New Product</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Log in/Register
+        <ng-template #loginTemplate>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Log in/Register
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item disabled" (click)="login()"><em>Log in (Under Construction)</em></a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item disabled" href="#"><em>Register (Under Construction)</em></a></li>
+            </ul>
+          </li>
+        </ng-template>
+
+<!--        <li class="nav-item" *ngIf="securityService.profile; else loginTemplate">-->
+<!--          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--            Logged in as : {{securityService.profile.firstName}}-->
+<!--          </a>-->
+<!--        </li>-->
+
+      </ul>
+      <div class="d-flex me-4">
+        <li class="nav-item dropdown d-flex" *ngIf="securityService.profile; else loginTemplate">
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Logged in as : {{securityService.profile.firstName}}
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item disabled" href="#"><em>Log in (Under Construction)</em></a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item disabled" href="#"><em>Register (Under Construction)</em></a></li>
+            <li class="dropdown-item"><a class="nav-link" (click)="logout()">Logout</a></li>
           </ul>
         </li>
-      </ul>
+      </div>
     </div>
   </div>
 </nav>
