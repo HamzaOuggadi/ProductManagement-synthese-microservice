@@ -22,7 +22,7 @@ export function kcFactory(kcService : KeycloakService) {
         clientId : "pm-client",
         url : "http://localhost:8080/"
       }, initOptions : {
-        onLoad : "login-required",
+        onLoad : "check-sso",
         checkLoginIframe : true
       }
     })
